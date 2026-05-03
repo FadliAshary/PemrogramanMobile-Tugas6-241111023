@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main Colors - Indigo/Deep Purple for a professional feel -->
+    <color name="primary">#3F51B5</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#E8EAF6</color>
+    <color name="onPrimaryContainer">#1A237E</color>
+
+    <color name="secondary">#5C6BC0</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="secondaryContainer">#C5CAE9</color>
+    <color name="onSecondaryContainer">#1A237E</color>
+
+    <!-- Semantic Colors for Finance -->
+    <color name="income">#1B5E20</color> <!-- Dark Green -->
+    <color name="income_container">#E8F5E9</color>
+    <color name="expense">#B71C1C</color> <!-- Dark Red -->
+    <color name="expense_container">#FFEBEE</color>
+
+    <!-- Neutrals -->
+    <color name="background">#FAFAFA</color>
+    <color name="onBackground">#121212</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="onSurface">#000000</color>
+    <color name="outline">#E0E0E0</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
