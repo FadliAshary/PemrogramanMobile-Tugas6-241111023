@@ -9,6 +9,8 @@ import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.example.penyimpanandataimplementasisqlite.databinding.FragmentHomeBinding
+import java.text.NumberFormat
+import java.util.Locale
 
 class HomeFragment : Fragment() {
 
@@ -48,7 +50,12 @@ class HomeFragment : Fragment() {
 
     private fun updateBalance() {
         val balance = dbHelper.getTotalBalance()
-        binding.tvBalance.text = "Rp $balance"
+        binding.tvBalance.text = "Rp ${formatNumber(balance)}"
+    }
+
+    private fun formatNumber(number: Int): String {
+        val formatter = NumberFormat.getNumberInstance(Locale("id", "ID"))
+        return formatter.format(number)
     }
 
     private fun showTransactionDialog(type: String) {

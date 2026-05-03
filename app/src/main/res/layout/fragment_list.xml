@@ -30,15 +30,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/secondaryContainer">
+                app:cardCornerRadius="24dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/primary">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="20dp">
+                    android:padding="24dp">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -50,26 +50,26 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Total Transaksi"
-                            android:textColor="@color/onSecondaryContainer"
-                            android:textSize="12sp"
-                            android:alpha="0.8" />
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
 
                         <TextView
                             android:id="@+id/tvTotalTransactions"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0 Item"
-                            android:textColor="@color/onSecondaryContainer"
-                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
                     <View
                         android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="@color/onSecondaryContainer"
-                        android:alpha="0.1"
-                        android:layout_marginHorizontal="16dp"/>
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:alpha="0.3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="20dp"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -80,18 +80,17 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Status"
-                            android:textColor="@color/onSecondaryContainer"
-                            android:textSize="12sp"
-                            android:alpha="0.8" />
+                            android:text="Saldo Saat Ini"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
 
                         <TextView
-                            android:id="@+id/tvSummaryStatus"
+                            android:id="@+id/tvSummaryBalance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Terpantau"
-                            android:textColor="@color/onSecondaryContainer"
-                            android:textSize="18sp"
+                            android:text="Rp 0"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>

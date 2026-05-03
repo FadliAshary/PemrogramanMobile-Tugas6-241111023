@@ -8,6 +8,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.penyimpanandataimplementasisqlite.databinding.FragmentListBinding
+import java.text.NumberFormat
+import java.util.Locale
 
 class ListFragment : Fragment() {
 
@@ -37,7 +39,7 @@ class ListFragment : Fragment() {
         binding.tvTotalTransactions.text = "${transactions.size} Item"
         
         val balance = dbHelper.getTotalBalance()
-        binding.tvSummaryStatus.text = if (balance >= 0) "Surplus" else "Defisit"
+        binding.tvSummaryBalance.text = "Rp ${formatNumber(balance)}"
     }
 
     private fun setupRecyclerView() {
@@ -49,13 +51,18 @@ class ListFragment : Fragment() {
         binding.rvTransactions.adapter = adapter
     }
 
+    private fun formatNumber(number: Int): String {
+        val formatter = NumberFormat.getNumberInstance(Locale("id", "ID"))
+        return formatter.format(number)
+    }
+
     private fun showDetailDialog(transaction: Transaction) {
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Rincian Transaksi")
         
         val message = """
             Keterangan: ${transaction.title}
-            Jumlah: Rp ${transaction.amount}
+            Jumlah: Rp ${formatNumber(transaction.amount)}
             Tipe: ${if (transaction.type == "INCOME") "Pemasukan" else "Pengeluaran"}
             Tanggal: ${transaction.date}
         """.trimIndent()
